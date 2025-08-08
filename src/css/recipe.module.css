@@ -1,0 +1,40 @@
+.recipe {
+  width: calc(85px * 3 + 20px * 2);
+  overflow: hidden;
+}
+
+.img {
+  display: flex;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.img .tags {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.title {
+  height: 50px;
+  padding: 0 3px;
+  margin-bottom: 5px;
+  line-height: 25px;
+}
+
+.heart {
+  width: 30px;
+  box-sizing: initial;
+  padding: 5px;
+  float: right;
+}
+
+.heart path {
+  stroke: currentColor;
+}

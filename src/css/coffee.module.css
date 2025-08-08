@@ -1,0 +1,94 @@
+.coffee {
+  width: calc(85px * 2 + 20px);
+  height: fit-content;
+  position: relative;
+}
+
+.img {
+  padding: 50px 35px 20px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  position: relative;
+}
+
+.img .tags {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.txt {
+  display: flex;
+  height: 110px;
+  margin-bottom: 5px;
+  padding: 0 3px;
+  flex-direction: column;
+}
+
+.txt .size {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.txt .title {
+  margin-bottom: 5px;
+  line-height: 25px;
+  flex-grow: 1;
+}
+
+.txt .price {
+  /* text-align: right; */
+  line-height: 25px;
+}
+
+.txt .price span {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+.btns .btn {
+  display: flex;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--point-color);
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.btns .btn:first-child {
+  border-right: 1px solid white;
+}
+
+.btns .btn .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.btns .btn p {
+  color: white;
+  font-size: 14px;
+}
+
+.heart {
+  width: 20px;
+  box-sizing: initial;
+  padding: 10px;
+  position: absolute;
+  /* top: 145px;
+  right: 5px; */
+  bottom: 25px;
+  right: 0;
+}
+
+.heart path {
+  stroke: currentColor;
+}

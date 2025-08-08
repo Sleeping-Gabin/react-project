@@ -1,0 +1,624 @@
+/* ---------- header ---------- */
+.header-outer {
+  background-color: var(--point-color);
+}
+
+.header {
+  width: 1240px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.header .gnb {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  float: left;
+}
+
+.header .gnb .logo {
+  display: block;
+  height: 20px;
+}
+
+.header .gnb a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  line-height: 20px;
+}
+
+.header .icons {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  float: right;
+}
+
+.header .icons li {
+  display: inline-block;
+}
+
+.header .icons li a {
+  display: block;
+  padding: calc(15px / 2) 10px;
+  color: white;
+}
+
+.header .icons li:last-of-type {
+  position: relative;
+}
+
+.header .icons li:last-of-type a {
+  padding-right: 20px;
+}
+
+.header .icons .cart-badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--sub-color);
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+
+/* ---------- home ---------- */
+.home .coffee-list {
+  display: grid;
+  margin-bottom: 50px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.home .recipe-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-bar {
+  display: flex;
+  padding: 3px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-bar p {
+  font-size: 24px;
+}
+
+.home .banner-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  display: flex;
+  height: 200px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  overflow: hidden;
+}
+
+.banner .banner-img {
+  width: calc(85px * 4 + 20px * 3);
+}
+
+.banner .banner-txt {
+  width: calc(85px * 8 + 20px * 7 - 160px);
+  padding: 30px 10px 0 50px;
+}
+
+/* ----- visual main ----- */
+.visual-main {
+  --swiper-theme-color: var(--point-color);--swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bottom: 12px;
+  --swiper-navigation-size: 24px;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+.visual-main .swiper-slide {
+  padding: 80px 120px;
+  background-size: cover;
+  position: relative;
+}
+
+/* ---------- list ---------- */
+.list-title .title {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+
+/* ---------- breadcrumb ---------- */
+.breadcrumb {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+/* ---------- detail coffee ---------- */
+.detail-coffee .coffee-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-coffee .coffee-main .coffee-img {
+  width: calc(85px * 5 + 20px * 4);
+}
+
+.detail-coffee .section-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.detail-coffee .coffee-recipe .recipe-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+/* ----- coffee info ----- */
+.coffee-info {
+  width: calc(85px * 6 + 20px * 5);
+}
+
+.coffee-info .tags {
+  margin-bottom: 10px;
+}
+
+.coffee-info .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coffee-info .btns .cart-btn {
+  display: flex;
+  width: calc(85px * 5 + 20px * 4);
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--point-color);
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee-info .btns .cart-btn .cart-icon {
+  width: 18px;
+  margin-right: 8px;
+}
+
+.coffee-info .btns .heart-icon {
+  width: 85px;
+  height: 30px;
+}
+
+.coffee-info .btns .heart-icon path {
+  stroke: currentColor;
+}
+
+/* ---------- coffee text ---------- */
+.coffee-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+
+.coffee-text > * {
+  width: calc(85px * 6  + 20px * 5);
+}
+
+.coffee-text .description {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 150%;
+}
+
+.coffee-text .size-box {
+  text-align: center;
+}
+
+.coffee-text .size-box p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.coffee-text .size-box .chips:first-of-type {
+  margin-bottom: 20px;
+}
+
+.coffee-text .taste-box .taste-bar {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.coffee-text .taste-box .taste-bar:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ----- coffee review ----- */
+.detail-coffee .coffee-review .review {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  position: relative;
+}
+
+.detail-coffee .coffee-review .review::before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  background-color: var(--sub-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+/* ---------- detail recipe ---------- */
+.detail-recipe .recipe-img {
+  height: 600px;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.detail-recipe .recipe-img img {  
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.detail-recipe .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detail-recipe .recipe-order li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  list-style: decimal inside;
+}
+
+/* ----- recipe info ----- */
+.recipe-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-info .recipe-txt .tags {
+  margin-bottom: 10px;
+}
+
+.recipe-info .recipe-txt .heart-icon {
+  margin-left: 10px;
+}
+
+.recipe-info .recipe-txt .heart-icon path {
+  stroke: currentColor;
+}
+
+.recipe-info .coffee {
+  width: calc(85px * 2 + 20px);
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  position: relative;
+}
+
+.recipe-info .coffee .coffee-img {
+  width: 120px;
+  height: 120px;
+  box-sizing: initial;
+  padding: 20px 35px;
+}
+
+.recipe-info .coffee p {
+  height: 50px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* ---------- cart ---------- */
+.cart > p {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .all-delete-btn {
+  border-bottom: 1px solid var(--sub-color);
+  overflow: hidden;
+}
+
+.cart .all-delete-btn button {
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  float: right;
+}
+.cart .all-delete-btn button:hover {
+  font-weight: bold;
+}
+
+.cart .cart-list {
+  margin-bottom: 20px;
+}
+
+.cart .cart-list li {
+  display: flex;
+  margin: 3px 0;
+  border-bottom: 1px solid var(--sub-color);
+  gap: 20px;
+  align-items: center;
+}
+
+.cart .cart-list li p {
+  width: 190px;
+  text-align: center;
+}
+
+.cart .cart-list li .cart-img {
+  width: 190px;
+  padding: 0 calc(85px / 2);
+}
+
+.cart .cart-list li .cart-num {
+  display: flex;
+  width: 190px;
+  align-items: center;
+}
+
+.cart .cart-list li .cart-num .num-btns div {
+  width: 26px;
+  height: 26px;
+  margin: 10px 20px;
+  border-radius: 50%;
+  background-color: var(--point-color);
+}
+
+.cart .cart-list li .delete-btn {
+  width: 30px;
+  height: 30px;
+  box-sizing: initial;
+  padding: calc((85px - 30px) / 2);
+}
+
+.cart .total-price {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 20px;
+}
+
+.cart .total-price button {
+  display: flex;
+  width: 190px;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--point-color);
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- like ---------- */
+.like .like-title {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.like .like-title p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.like > p {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.like .like-list {
+  display: flex;
+  gap: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.like .like-list li {
+  width: calc(85px * 3 + 20px * 2);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--sub-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.like .like-list li .item-txt {
+  width: 135px;
+  line-height: 25px;
+  float: right;
+}
+
+.like .like-list li .heart-icon {
+  width: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.like .like-list li .heart-icon path {
+  fill: #f8382a;
+  stroke: #f8382a;
+}
+
+/* ----- like toggle ----- */
+.like-toggle {
+  display: flex;
+  width: 190px;
+  padding: 3px;
+  border: 1px solid var(--point-color);
+  border-radius: 20px;
+}
+
+.like-toggle .divide-line {
+  width: 1px;
+  margin: 2px 7px;
+  background-color: var(--point-color);
+}
+
+/* ---------- letter ---------- */
+.letter p {
+  text-align: justify;
+}
+
+.letter .letter-title {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.letter .letter-title p {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter .section-title {
+  padding: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.monthly-recipe {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.monthly-recipe > * {
+  margin: 0 10px;
+}
+
+.interview .interview-profile {
+  display: flex;
+  align-items: center;
+}
+
+.interview .interview-profile .profile-img {
+  width: 190px;
+  height: 190px;
+  margin-right: 20px;
+}
+
+.interview .interview-profile p {
+  width: calc(85px * 10 + 20px * 9);
+}
+
+.book .book-img {
+  width: calc(85px * 10 + 20px * 9);
+  height: 300px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+}
+
+.book .book-img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* ---------- footer ---------- */
+.footer-outer {
+  background-color: var(--point-color);
+  margin-top: 150px;
+}
+
+.footer {
+  width: 1240px;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer .footer-nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.footer .footer-nav li:first-child {
+  padding-left: 0;
+}
+
+.footer .footer-nav li:last-child {
+  padding-right: 0;
+}
+
+.footer .footer-nav .sns li {
+  width: 20px;
+  height: 20px;
+  box-sizing: initial;
+}
+
+.footer .company {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.footer .company span {
+  margin-right: 20px;
+  white-space: nowrap;
+  line-height: 20px;
+}
+
+.footer .copyright {
+  display: flex;
+  padding: 10px 0;
+  font-size: 14px;
+  align-items: center;
+}
+
+.footer .copyright .logo {
+  width: 100px;
+  margin-right: 20px;
+}
