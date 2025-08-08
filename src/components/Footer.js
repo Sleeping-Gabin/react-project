@@ -34,7 +34,9 @@ export default function Footer() {
         </p>
 
         <div className="copyright">
-          <Logo className="logo"/>
+          <a href="https://www.nespresso.com/kr/ko">
+            <Logo className="logo"/>
+          </a>
           <p>Nestlé Nespresso S.A. 2025</p>
         </div>
       </footer>
