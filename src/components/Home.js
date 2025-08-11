@@ -20,7 +20,11 @@ export default function Home() {
     border: none;
     border-radius: 50%;
     background-color: var(--point-color);
-    color: white
+    color: white;
+    
+    &:hover {
+      background-color: var(--point-hover);
+    }
   `
 
   return (
@@ -64,6 +68,11 @@ function TitleBar(props) {
     background: none;
     color: var(--point-color);
     font-size: 14px;
+
+    &:hover {
+      background-color: var(--point-color);
+      color: white;
+    }
   `
 
   return (

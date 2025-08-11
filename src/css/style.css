@@ -203,6 +203,10 @@
   justify-content: center;
 }
 
+.coffee-info .btns .cart-btn:hover {
+  background-color: var(--point-hover);
+}
+
 .coffee-info .btns .cart-btn .cart-icon {
   width: 18px;
   margin-right: 8px;
@@ -215,6 +219,10 @@
 
 .coffee-info .btns .heart-icon path {
   stroke: currentColor;
+}
+
+.coffee-info .btns .heart-icon:hover path {
+  color: #f8382a;
 }
 
 /* ---------- coffee text ---------- */
@@ -320,6 +328,10 @@
   stroke: currentColor;
 }
 
+.recipe-info .recipe-txt .heart-icon:hover path {
+  color: #f8382a;
+}
+
 .recipe-info .coffee {
   width: calc(85px * 2 + 20px);
   margin-left: 20px;
@@ -333,6 +345,10 @@
   height: 120px;
   box-sizing: initial;
   padding: 20px 35px;
+}
+
+.recipe-info .coffee:hover .coffee-img img {
+  transform: scale(1.05);
 }
 
 .recipe-info .coffee p {
@@ -402,6 +418,11 @@
   margin: 10px 20px;
   border-radius: 50%;
   background-color: var(--point-color);
+  cursor: pointer;
+}
+
+.cart .cart-list li .cart-num .num-btns div:hover {
+  background-color: var(--point-hover);
 }
 
 .cart .cart-list li .delete-btn {
@@ -409,6 +430,7 @@
   height: 30px;
   box-sizing: initial;
   padding: calc((85px - 30px) / 2);
+  cursor: pointer;
 }
 
 .cart .total-price {
@@ -429,6 +451,10 @@
   color: white;
   align-items: center;
   justify-content: center;
+}
+
+.cart .total-price button:hover {
+  background-color: var(--point-hover);
 }
 
 /* ---------- like ---------- */

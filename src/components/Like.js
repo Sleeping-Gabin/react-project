@@ -44,6 +44,10 @@ function LikeToggle(props) {
     text-align: center;
     font-size: 14px;
     line-height: 20px;
+
+    &:hover {
+      font-weight: bold;
+    }
   `
 
   return (
@@ -99,7 +103,7 @@ function LikeItem(props) {
           </p>
         }
       </div>
-      <HeartIcon className="heart-icon" onClick={handleClickLike}/>
+      <HeartIcon className="heart-icon" onClick={handleClickLike} style={{cursor: "pointer"}}/>
     </li>
   )
 }

@@ -3,6 +3,8 @@
 :root {
   --point-color: #257A57;
   --sub-color: #f3eee6;
+  --point-hover: #285e47;
+  --sub-hover: #e2ddd5;
 }
 
 * {

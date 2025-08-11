@@ -31,20 +31,25 @@ export default function VisualMain() {
   const EnterBtn = styled.button`
     margin-top: 30px;
     padding: 5px 15px;
-    border: 1px solid ${(props) => props.color ? props.color : "black"};
+    border: 1px solid black;
     border-radius: 15px;
     background: none;
-    color: ${(props) => props.color ? props.color : "black"};
+    color: black;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   `
 
-  const SwiperBtn = styled.span`
-    width: var(--swiper-navigation-size);
-    height: var(--swiper-navigation-size);
-    padding: 30px;
-    border-radius: 50%;
-    background-color: var(--point-color);
-    color: white;
-  `
+  const style = {
+    width: "var(--swiper-navigation-size)",
+    height: "var(--swiper-navigation-size)",
+    padding: "30px",
+    borderRadius: "50%",
+    backgroundColor: "var(--point-color)",
+    color: "white",
+    opacity: show ? "1" : "0",
+  }
 
   return (
     <div onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
@@ -55,7 +60,8 @@ export default function VisualMain() {
           clickable: true
         }}
         autoplay={{
-          delay: 4000
+          delay: 4000,
+          pauseOnMouseEnter: true,
         }}
         loop
         effect={"fade"}
@@ -92,12 +98,14 @@ export default function VisualMain() {
           <p>오리지널 커피 150 캡슐 또는 버츄오 커피 100 캡슐 이상 담으시면<br/>최대 41,000원 상당의 웰컴 기프트를 드립니다.</p>
           <EnterBtn onClick={() => navigate("/list/coffee")}>커피 구매하기</EnterBtn>
         </SwiperSlide>
-        <SwiperBtn 
-          className={"swiper-button-prev" + (!show ? " swiper-button-hidden" : "")} 
+        <span
+          style={style}
+          className="swiper-button-prev"
           onClick={() => swiper.current.slidePrev()} 
         />
-        <SwiperBtn 
-          className={"swiper-button-next" + (!show ? " swiper-button-hidden" : "")} 
+        <span
+          style={style}
+          className="swiper-button-next"
           onClick={() => swiper.current.slideNext()} 
         />
       </Swiper>

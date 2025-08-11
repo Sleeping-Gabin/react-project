@@ -15,9 +15,21 @@ export default function MyModal() {
     padding: 5px 15px;
     border: none;
     border-radius: 5px;
-    background-color: ${(props) => props.bg ? props.bg : "var(--sub-color)"};
-    color: ${(props) => props.color ? props.color : "black"};
+    background-color: var(--sub-color);
     font-size: 14px;
+
+    &:hover {
+      background-color: var(--sub-hover);
+    }
+  `
+
+  const PointButton = styled(Button)`
+    background-color: var(--point-color);
+    color: white;
+
+    &:hover {
+      background-color: var(--point-hover);
+    }
   `
 
   return (
@@ -31,13 +43,13 @@ export default function MyModal() {
         <Button onClick={() => dispatch(hideModal())}>
           닫기
         </Button>
-        <Button bg="var(--point-color)" color="white" 
+        <PointButton 
         onClick={() => {
           dispatch(hideModal());
           navigate("/cart");
         }}>
           장바구니로 이동
-        </Button>
+        </PointButton>
       </Modal.Footer>
     </Modal>
   )

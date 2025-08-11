@@ -1,6 +1,7 @@
 .recipe {
   width: calc(85px * 3 + 20px * 2);
   overflow: hidden;
+  position: relative;
 }
 
 .img {
@@ -15,6 +16,10 @@
   overflow: hidden;
 }
 
+.recipe:hover .img img {
+  transform: scale(1.05);
+}
+
 .img .tags {
   position: absolute;
   top: 5px;
@@ -22,19 +27,24 @@
 }
 
 .title {
-  height: 50px;
   padding: 0 3px;
   margin-bottom: 5px;
-  line-height: 25px;
+  line-height: 36px;
 }
 
 .heart {
   width: 30px;
   box-sizing: initial;
   padding: 5px;
-  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
 }
 
 .heart path {
   stroke: currentColor;
+}
+
+.heart:hover path {
+  color: #f8382a;
 }

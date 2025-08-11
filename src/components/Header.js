@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { ReactComponent as Logo } from "../img/logo.svg";
-import heartIcon from "../img/Heart.svg";
-import cartIcon from "../img/Shopping cart.svg";
+import { ReactComponent as HeartIcon } from "../img/Heart.svg";
+import { ReactComponent as CartIcon } from "../img/Shopping cart.svg";
 
 export default function Header() {
   const cart = useSelector((state) => state.cart);
@@ -21,12 +21,12 @@ export default function Header() {
         <ul className="icons">
           <li>
             <NavLink to="/like">
-              <img src={heartIcon} alt="하트 아이콘" />
+              <HeartIcon />
             </NavLink>
           </li>
           <li>
             <NavLink to="/cart">
-              <img src={cartIcon} alt="장바구니 아이콘" />
+              <CartIcon />
             </NavLink>
             {cart.length > 0 && <div className="cart-badge">{cart.length}</div>}
           </li>

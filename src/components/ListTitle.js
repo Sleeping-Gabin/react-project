@@ -15,12 +15,13 @@ export default function ListTitle(props) {
   tags.unshift("오리지널");
   tags.unshift("버츄오");
 
-  const Tag = styled.span`
+  const Tag = styled.button`
     display: inline-block;
     padding: 3px 12px;
     margin: 10px 5px 10px;
     border-radius: 20px;
     border: 1px solid #999;
+    background: white;
     font-size: 14px;
 
     &:hover {

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { ReactComponent as HeartIcon } from "../img/Heart.svg";
-import cartIcon from "../img/Shopping cart.svg";
+import { ReactComponent as CartIcon } from "../img/Shopping cart.svg";
 import { addCartItem, toggleLikeItem, showModal } from "./store";
 import { numToPriceStr } from "../utils";
 
@@ -63,14 +63,10 @@ function Coffee(props) {
       </div>
       <HeartIcon className={coffeeStyle.heart} onClick={handleClickLike} style={likeStyle}/>
 
-      <div className={coffeeStyle.btns}>
-        <button type="button" className={coffeeStyle.btn} onClick={handleClickCart}>
-          <div className={coffeeStyle.icon}>
-            <img src={cartIcon} alt="장바구니 아이콘" />
-          </div>
-          <p>장바구니</p>
-        </button>
-      </div>
+      <button type="button" className={coffeeStyle.btn} onClick={handleClickCart}>
+        <CartIcon className={coffeeStyle.cart} />
+        <p>장바구니</p>
+      </button>
     </div>
   )
 }
