@@ -194,7 +194,7 @@ const recipes = [
     sid: "recipe",
     info: {
       cid: "버츄오",
-      img: "dolce_americano.jpg",
+      img: "dolce_americano.JPG",
       title: "돌체 아메리카노",
       tags: ["더블 에스프레소"],
     },

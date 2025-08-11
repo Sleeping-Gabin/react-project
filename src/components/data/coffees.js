@@ -118,7 +118,7 @@ const coffees = [
       sizes: ["룽고(110ml)", "카푸치노&라테 마키아토"]
     },
     detail: {
-      img: "chocolate_detail.jpg",
+      img: "chocolate_detail.JPG",
       intro: "나를 채우는 풍성한 만족감을 주는 커피",
       text: {
         description: "남미 아라비카 커피의 곡물향과 어우러진 다크 초콜릿향의 리치함으로 나를 채우는 풍성한 만족감을 느껴보세요. 달콤한 비스킷향과 곡물향에 우아한 다크 초콜릿향이 만나 기쁨을 더합니다. 카푸치노로 즐겨 우유와 조화로운 우아한 고소함과 초콜릿향의 강렬한 끝맛을 만끽해 보세요.",
@@ -229,7 +229,7 @@ const coffees = [
       sizes: ["아이스 레시피", "에스프레소(40ml)"]
     },
     detail: {
-      img: "freddo_delicato_detail.jpg",
+      img: "freddo_delicato_detail.JPG",
       intro: "향긋한 과일향의 산뜻한 아이스 커피",
       text: {
         description: "프레도 델리카토는 부드럽고 섬세한 풍미의 마일드한 아이스커피로 즐기기에 최적화 된 분쇄도로 원두를 그라인딩하고 라이트 로스팅한 커피입니다. 라이트하고 균형 잡힌 베이스에 상쾌하고 밝은 과일향이 퍼지면서 갈증을 해소하는 산뜻함을 선사합니다.\n얼음으로 가득 찬 컵 위에 에스프레소로 추출한 뒤, 시원한 물이나 우유를 더해 아이스 아메리카노 혹은 아이스 라테로 즐겨보세요.",
@@ -253,7 +253,7 @@ const coffees = [
       sizes: ["강도 7", "룽고(110ml)"]
     },
     detail: {
-      img: "vienna_lungo_decaf_detail.jpg",
+      img: "vienna_lungo_decaf_detail.JPG",
       intro: "우아한 밸런스의 맥아향 디카페인 커피",
       text: {
         description: "비엔나 커피하우스에서 커피 애호가들은 부드러운 바디감을 가진 곡물향의 커피를 즐겨 왔습니다. 부드럽고 균형감이 좋은 커피가 선사하는 오스트리아의 우아한 커피 문화를 느껴 보세요.\n월드 익스플로레이션 라인 중에 가장 사랑 받는 비엔나 룽고 커피가 디카페인으로 탄생했습니다. 늦은 시간에도 부담 없이 우아한 룽고 한잔과 함께 하루를 정리해 보세요.",
@@ -311,7 +311,7 @@ const coffees = [
       sizes: ["머그(230ml)"]
     },
     detail: {
-      img: "bianco_forte_detail.jpg",
+      img: "bianco_forte_detail.JPG",
       intro: "우유와 어울리는 강렬함",
       text: {
         description: "우유를 더하여 마실 때에도 커피의 진한 로스팅향을 함께 즐길 수 있는 커피입니다. 엄선한 콜롬비아와 케냐산 아라비카를 다크 로스팅하여 커피의 풍부한 로스팅향과 곡물향이 돋보이는 커피로, 우유를 더했을 때 커피의 진한 향과 우유의 달콤함이 다이나믹한 균형을 이룹니다. 강렬하면서도 우유와 만났을 때 균형 잡힌 풍미를 선사하는 비앙코 포르테 포 밀크는 약간의 우유에 커피를 더하여 마시는 리버소 레시피로 즐겨보세요.",
@@ -335,7 +335,7 @@ const coffees = [
       sizes: ["강도 4", "에스프레소(40ml)"]
     },
     detail: {
-      img: "voltesso_detail.jpg",
+      img: "voltesso_detail.JPG",
       intro: "가볍고 달콤한 풍미",
       text: {
         description: "라이트 로스팅 한 브라질과 콜롬비아의 아라비카 원두를 블렌드하여 특유의 달콤한 풍미를 선사하는 에스프레소 커피입니다. 달콤한 비스킷향과 감미로운 와인향에 부드럽게 균형잡힌 볼테소를 즐겨보세요.\n볼테소에 물을 더해 마일드하고 스위트한 풍미의 블랙커피로 즐겨 보세요. 때때로 물 대신 우유를 더해주면 보다 부드럽고 고소한 라테로도 즐길 수 있습니다.",
@@ -364,7 +364,7 @@ const coffees = [
       sizes: ["강도 5", "에스프레소(40ml)", "룽고(110ml)"]
     },
     detail: {
-      img: "nicaragua_detail.jpg",
+      img: "nicaragua_detail.JPG",
       intro: "꿀처럼 달콤한 풍미의 곡물향 커피",
       text: {
         description: "한 입 머금고 음미하면 느껴지는 달콤한 꿀향과 고소하고 부드러운 곡물향이 감미로운 아라비카 커피입니다. 각별한 노력이 필요한 보기 드문 블랙허니 가공법을 통해 독특한 달콤함이 완성됩니다.",
@@ -393,7 +393,7 @@ const coffees = [
       sizes: ["에스프레소(40ml)"]
     },
     detail: {
-      img: "chiaro_detail.jpg",
+      img: "chiaro_detail.JPG",
       intro: "우유와 어울리는 비스킷향 커피",
       text: {
         description: "브루클린 바리스타들에게 영감을 받아 케냐와 인도네시아산 아라비카를 라이트로스팅하여 커피 천연의 단맛이 잘 느껴지는 커피입니다. 키아로 커피에 우유를 첨가하면 크리미한 캐러멜향과 달콤한 비스킷향을 제대로 느낄 수 있습니다.",
@@ -417,7 +417,7 @@ const coffees = [
       sizes: ["강도 4", "에스프레소(40ml)"]
     },
     detail: {
-      img: "cosi_detail.jpg",
+      img: "cosi_detail.JPG",
       intro: "시트러스향과 곡물향의 조화를 이루는 커피",
       text: {
         description: "코지는 살짝 구운 곡물향에 섬세하고 균형잡힌 과일향을 선사합니다. 은은한 과일향 덕분에 부드러운 곡물향과 살짝 구운 토스트향의 아로마가 더욱 품격있는 조화를 이룹니다.",
@@ -446,7 +446,7 @@ const coffees = [
       sizes: ["강도 9", "에스프레소(40ml)"]
     },
     detail: {
-      img: "altissio_decaffeinato_detail.jpg",
+      img: "altissio_decaffeinato_detail.JPG",
       intro: "풍부한 바디감의 디카페인",
       text: {
         description: "카페인을 제거한 인디아, 브라질, 코스타리카 원두를 블렌드하여 풍부하고 진한 바디감에 부드럽고 고소한 곡물향을 선사하는 디카페인 에스프레소 커피입니다.\n 마치 부드럽고 촉감이 좋은 왕실 벨벳 가운처럼 진하면서도 부드러운 크레마 안에 우아한 로스팅향과 고소한 곡물향이 돋보이는 크리미한 커피입니다.",
@@ -475,7 +475,7 @@ const coffees = [
       sizes: ["강도 6", "에스프레소(40ml)", "룽고(110ml)"]
     },
     detail: {
-      img: "colombia_detail.jpg",
+      img: "colombia_detail.JPG",
       intro: "과즙향의 산뜻한 산미와 와인향을 품은 커피",
       text: {
         description: "마스터 오리진 콜롬비아는 고지대에서 재배된 콜롬비아산 아라비카를 콜롬비아의 숙련된 농부들만이 완성할 수 있는 늦수확 가공법으로 더 오래 무르익은 커피 체리의 향이 배어든 산뜻한 산미가 와인향과 잘 어우러지는 커피입니다.",
@@ -890,7 +890,7 @@ const coffees = [
       sizes: ["강도 11", "더블 에스프레소(80ml)"]
     },
     detail: {
-      img: "double_espresso_scuro_detail.jpg",
+      img: "double_espresso_scuro_detail.JPG",
       intro: "진하고 강렬한 풍미",
       text: {
         description: "강하게 다크 로스팅 한 코스타리카산 아라비카와 과테말라산 로부스타를 블렌드하여 진한 다크 코코아와 섬세한 바닐라 향과 함께 스모키 한 풍미가 돋보이는 커피입니다. 새로운 영감과 함께 시작하는 하루의 첫 커피로 더블 에스프레소 스쿠로를 즐겨보세요.\n더블 에스프레소 스쿠로에 우유를 더해 더블 샷 카푸치노 또는 더블 에스프레소 라테로 즐겨보세요. 달콤한 코코아와 바닐라 향이 더 풍부하게 피어올라 커피의 단맛과 고소한 우유의 완벽한 조화를 느낄 수 있습니다.",
@@ -1146,7 +1146,7 @@ const coffees = [
       sizes: ["강도 8", "에스프레소(40ml)"]
     },
     detail: {
-      img: "istanbul_detail.jpg",
+      img: "istanbul_detail.JPG",
       intro: "아몬드향의 여운이 남는 로스팅향과 과일향의 조화",
       text: {
         description: "벨벳처럼 부드럽고 풍성한 블렌드로 강도 높은 로스팅향과 과일향이 대조적인 조화를 이루며 달콤한 아몬드향의 여운이 남는 커피입니다. 에스프레소와 물 한 잔, 거기에 터키쉬 딜라이트 디저트를 함께하여 이스탄불 스타일로 즐겨 보세요.",
@@ -1204,7 +1204,7 @@ const coffees = [
       sizes: ["강도 6", "그랑 룽고(150ml)"]
     },
     detail: {
-      img: "arondio_detail.jpg",
+      img: "arondio_detail.JPG",
       intro: "부드럽고 마일드한 곡물향",
       text: {
         description: "은은한 산미와 부드러운 곡물향의 습식 가공한 콜롬비아산 아라비카 원두와 긴 시간 다크 로스팅하여 보다 강렬한 곡물향을 전하는 과테말라산 로부스타 원두 블렌드로 깊고 깔끔한 풍미에 균형잡힌 맛까지 선사하는 그랑 룽고 커피 입니다.",
@@ -1257,7 +1257,7 @@ const coffees = [
       sizes: ["강도 9", "에스프레소(40ml)"]
     },
     detail: {
-      img: "rio_de_janeiro_detail.jpg",
+      img: "rio_de_janeiro_detail.JPG",
       intro: "리우데자네이루를 닮은 허브향",
       text: {
         description: "기분 좋은 쓴맛과 벨벳처럼 부드러운 질감을 지닌 브라질산 아라비카를 다크 로스팅 하여 묵직한 바디감에 이국적인 허브 향과 월넛, 샌들우드의 조화가 돋보이는 커피입니다. 에스프레소에 같은 양의 따뜻한 물을 추가하여 리우 스타일의 부드러운 커피, 카리오카를 즐겨보세요.",
@@ -1286,7 +1286,7 @@ const coffees = [
       sizes: ["머그(230ml)"]
     },
     detail: {
-      img: "roasted_hazelnut_detail.jpg",
+      img: "roasted_hazelnut_detail.JPG",
       intro: "달콤한 휴식",
       text: {
         description: "라이트 로스팅 아라비카 블렌드에 캐러멜라이즈 견과류향이 감싸 거부할 수 없는 달콤한 휴식을 제공합니다. 달콤한 비스킷향과 곡물향의 섬세한 아라비카 베이스에 로스티드 향이 만나 기쁨을 더합니다.",
@@ -1315,7 +1315,7 @@ const coffees = [
       sizes: ["강도 5", "더블 에스프레소(80ml)"]
     },
     detail: {
-      img: "double_espresso_dolce_detail.jpg",
+      img: "double_espresso_dolce_detail.JPG",
       intro: "부드럽고 달콤한 곡물향",
       text: {
         description: "브라질과 멕시코 원두의 맥아향과 우간다 원두의 고소한 곡물향을 블렌드 하여 달콤함과 부드러움을 전하는 균형 잡힌 커피입니다.",
