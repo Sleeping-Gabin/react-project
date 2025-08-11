@@ -1,6 +1,6 @@
 /* ---------- header ---------- */
 .header-outer {
-  background-color: var(--point-color);
+  border-bottom: 1px solid #ccc;
 }
 
 .header {
@@ -21,10 +21,14 @@
   height: 20px;
 }
 
+.header .gnb .logo path {
+  fill: black;
+  stroke: black;
+}
+
 .header .gnb a {
   display: inline-block;
   padding: 10px 20px;
-  color: white;
   line-height: 20px;
 }
 
@@ -42,7 +46,10 @@
 .header .icons li a {
   display: block;
   padding: calc(15px / 2) 10px;
-  color: white;
+}
+
+.header .icons li path {
+  stroke: black;
 }
 
 .header .icons li:last-of-type {
@@ -57,7 +64,9 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: var(--sub-color);
+  /* background-color: var(--sub-color); */
+  background-color: var(--point-color);
+  color: white;
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
@@ -597,7 +606,7 @@
 
 /* ---------- footer ---------- */
 .footer-outer {
-  background-color: var(--point-color);
+  background-color: #2b3d35;
   margin-top: 150px;
 }
 
