@@ -64,7 +64,7 @@
 
 ## 구현 내용
 ### 커피/레시피 필터링
-![test](test.JPG)
+![필터링](https://github.com/user-attachments/assets/3c7a0721-a170-4b04-ad5d-a33a985d8605)
 <details>
 <summary>코드 보기</summary>
 
@@ -135,7 +135,7 @@ export default function ListTitle(props) {
 <br>
 
 ### redux toolkit을 사용한 찜목록/장바구니
-![test](test.JPG)
+![찜](https://github.com/user-attachments/assets/413ead5f-2b92-441d-9f43-4cb25c507564)
 
 <details>
 <summary>코드 보기</summary>
@@ -208,7 +208,7 @@ function LikeItem(props) {
 찜 목록에서 하트 클릭 시 해제된다.  
 <br>
 
-![test](test.JPG)
+![장바구니](https://github.com/user-attachments/assets/6d891dca-6b73-4c5a-86a3-156d7740db42)
 
 <details>
 <summary>코드 보기</summary>
