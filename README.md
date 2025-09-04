@@ -1,5 +1,5 @@
 ## 소개
-네스프레소 사이트의 일부를 리엑트를 사용하여 리뉴얼한 사이트
+네스프레소 사이트의 일부를 리엑트를 사용하여 리뉴얼한 사이트  
 커피 캡슐을 판매하고, 커피를 활용한 레시피와 커피 레터를 소개  
 <br>
 
@@ -9,8 +9,12 @@
 포트폴리오 용도로만 사용되었습니다.  
 <br>
 
+### 배포 주소
+[배포 주소](https://sleeping-gabin.github.io/react-project/)  
+<br>
+
 ### 기획서
-[기획서]()  
+[기획서](https://github.com/Sleeping-Gabin/react-project/raw/main/plan_react.pdf)  
 <br>
 
 ### 사용 기술
@@ -18,12 +22,13 @@
 ![redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
 ![router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-![bootstrap](  https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)  
+![react bootstrap](https://img.shields.io/badge/react_bootstrap-41E0FD?style=for-the-badge&logo=reactbootstrap&logoColor=white)
+![css modules](https://img.shields.io/badge/css_modules-000000?style=for-the-badge&logo=cssmodules&logoColor=white)  
 
 - redux toolkit
   - 찜하기 / 장바구니 구현
 - bootstrap
-  - Modal: 장바구니 추가 시 모달창 (MyModal.js)
+  - Modal: 장바구니 추가 시 모달창
 - module.css
   - Coffee, Recipe 컴포넌트에 활용  
 <br>
@@ -31,6 +36,15 @@
 ### 프로젝트 진행 과정
 - 2025.07.28 ~ 2025.08.01 : 기획
 - 2025.08.01 ~ 2025.08.08 : 개발  
+
+<br><br>
+
+## 페이지
+|메인 페이지   |커피 목록   |레시피 목록   |커피 레터   |
+|:----------:|:---------:|:----------:|:---------:|
+|![메인](https://github.com/user-attachments/assets/feaef465-6a7b-49ae-ab26-178dd173acc6)|![커피 목록](https://github.com/user-attachments/assets/bd9cf816-abc2-412a-bdd1-1a657fe25dbe)|![레시피 목록](https://github.com/user-attachments/assets/67ab5f7c-d668-43f0-9ff5-a721032c6eba)|![커피 레터](https://github.com/user-attachments/assets/518d1250-4858-4853-b36e-da0ec085fb56)|
+|커피 상세   |레시피 상세   |찜 목록   |장바구니   |
+|![커피](https://github.com/user-attachments/assets/1731a31b-b28f-4eee-9341-e356933c753b)|![레시피](https://github.com/user-attachments/assets/d915b6b8-5dda-441f-a032-426d705ba2e5)|![찜 목록](https://github.com/user-attachments/assets/d87af352-c281-4a64-a349-109e3c62535c)|![장바구니](https://github.com/user-attachments/assets/b5fb9ef4-5c43-4da9-8327-39e9ad678e92)|
 
 <br><br>
 
@@ -69,36 +83,13 @@
 <summary>코드 보기</summary>
 
 ```jsx
-// src/components/ListCoffee.js
-
-export default function ListCoffee() {
-  const [coffees, setCoffees] = useState(data);
-
-  return (
-    <div>
-      <ListTitle sid="coffee" data={data} setItems={setCoffees} />
-      <div className="list">
-        {coffees.map((coffee) => <Coffee key={coffee.pid} coffee={coffee} />)}
-      </div>
-    </div>
-  )
-}
-```
-
-```jsx
 // src/components/ListTitle.js
 
 export default function ListTitle(props) {
   const {sid, data, setItems} = props;
   const [selectTag, setSelectTag] = useState();
 
-  let tags = data.reduce((prev, cur) => { 
-    prev.push(...cur.info.tags);
-    return prev;
-  }, []);
-  tags = Array.from(new Set(tags));
-  tags.unshift("오리지널");
-  tags.unshift("버츄오");
+  ...
 
   const handleClickTag = (e) => {
     let tag = e.currentTarget.textContent;
@@ -117,8 +108,7 @@ export default function ListTitle(props) {
 
   return (
     <div className="list-title">
-      <Breadcrumb sid={sid} />
-      <p className="title">{sid==="coffee" ? "커피 캡슐" : "홈카페 레시피"}</p>
+      ...
       <div className="tags">
         {tags.map(
           (tag, idx) => <Tag key={idx} className={idx===selectTag && "select"} onClick={handleClickTag}>{tag}</Tag>
@@ -159,15 +149,6 @@ const likeSlice = createSlice({
     }
   }
 });
-export const { toggleLikeItem } = likeSlice.actions;
-
-export default configureStore({
-  reducer: {
-    cart: cartSlice.reducer,
-    like: likeSlice.reducer,
-    modal: modalSlice.reducer
-  }
-});
 ```
 
 ```jsx
@@ -184,20 +165,8 @@ function LikeItem(props) {
 
   return (
     <li>
-      <ItemImg onClick={() => navigate(`/${sid}/${pid}`)}>
-        <img src={process.env.PUBLIC_URL+`/img/${sid}/${info.img}`} alt={pid} />
-      </ItemImg>
-      <div className="item-txt">
-        <p style={{fontSize: "18px"}} onClick={() => navigate(`/${sid}/${pid}`)}>{info.title}</p>
-        {
-          sid === "coffee" &&
-          <p>
-            {numToPriceStr(info.price)} 원
-            <span style={{fontSize: "14px", marginLeft: "5px"}}>({info.capsule} 캡슐)</span>
-          </p>
-        }
-      </div>
-      <HeartIcon className="heart-icon" onClick={handleClickLike} style={{cursor: "pointer"}}/>
+      ...
+      <HeartIcon className="heart-icon" onClick={handleClickLike}/>
     </li>
   )
 }
@@ -230,65 +199,12 @@ const cartSlice = createSlice({
         state[idx].count++;
       }
     },
-    deleteCartItem: (state, action) => {
-      let idx = state.findIndex(item => item.pid === action.payload);
-      state.splice(idx, 1);
-    },
-    deleteAllCart: (state) => {
-      state.splice(0, state.length);
-    },
-    increaseCartItem: (state, action) => {
-      let idx = state.findIndex(item => item.pid === action.payload);
-      state[idx].count++;
-    },
-    decreaseCartItem: (state, action) => {
-      let idx = state.findIndex(item => item.pid === action.payload);
-      state[idx].count--;
-
-      if (state[idx].count <= 0) {
-        state.splice(idx, 1);
-      }
-    }
+    deleteCartItem: (state, action) => { /*...*/ },
+    deleteAllCart: (state) => { /*...*/ },
+    increaseCartItem: (state, action) => { /*...*/ },
+    decreaseCartItem: (state, action) => { /*...*/ }
   }
 });
-export const { addCartItem, deleteCartItem, deleteAllCart, increaseCartItem, decreaseCartItem } = cartSlice.actions;
-```
-
-```jsx
-// src/components/Cart.js
-
-function CartItem(props) {
-  const {pid, info, count} = props.item;
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  return (
-    <li>
-      <div className="cart-img" onClick={() => navigate("/coffee/"+pid)}>
-        <img src={process.env.PUBLIC_URL+`/img/coffee/${info.img}`} alt={info.title} />
-      </div>
-      <p style={{width: "295px"}} onClick={() => navigate("/coffee/"+pid)}>
-        {info.title}
-        </p>
-      <p onClick={() => navigate("/coffee/"+pid)}>{numToPriceStr(info.price)} 원</p>
-      <div className="cart-num">
-        <p>{count}</p>
-        <div className="num-btns">
-          <div onClick={() => dispatch(increaseCartItem(pid))}>
-            <img src={process.env.PUBLIC_URL+"/img/icons/plus.png"} alt="+" />
-          </div>
-          <div onClick={() => dispatch(decreaseCartItem(pid))}>
-            <img src={process.env.PUBLIC_URL+"/img/icons/minus.png"} alt="-" />
-          </div>
-        </div>
-      </div>
-      <p>{numToPriceStr(info.price * count)} 원</p>
-      <div className="delete-btn" onClick={() => dispatch(deleteCartItem(pid))}>
-        <img src={process.env.PUBLIC_URL+"/img/icons/close.png"} alt="삭제 버튼" />
-      </div>
-    </li>
-  )
-}
 ```
 </details>
 
