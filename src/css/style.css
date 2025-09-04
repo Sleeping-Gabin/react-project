@@ -421,6 +421,11 @@
   align-items: center;
 }
 
+.cart .cart-list li .cart-num p span {
+  font-size: 14px;
+  color: #666;
+}
+
 .cart .cart-list li .cart-num .num-btns div {
   width: 26px;
   height: 26px;
@@ -449,10 +454,20 @@
   font-size: 20px;
 }
 
+.cart .total-price p {
+  width: 190px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.cart .total-price p span {
+  font-size: 16px;
+  color: #666;
+}
+
 .cart .total-price button {
   display: flex;
   width: 190px;
-  margin-left: 20px;
   padding: 5px;
   border-radius: 5px;
   border: none;

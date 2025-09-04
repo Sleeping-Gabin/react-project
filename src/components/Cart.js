@@ -22,7 +22,15 @@ export default function Cart() {
             {items.map((item) => <CartItem key={item.pid} item={item}/>)}
           </ul>
           <div className="total-price">
-            <p>합계&nbsp;&nbsp;&nbsp;{numToPriceStr(items.reduce((prev, cur) => prev + cur.info.price * cur.count, 0))} 원</p>
+            <p>
+              총&nbsp;&nbsp;&nbsp;{items.reduce((prev, cur) => prev + cur.count, 0)} 개&nbsp;
+              <span>
+                ({items.reduce((prev, cur) => prev + cur.info.capsule * cur.count, 0)} 캡슐)
+              </span>              
+              </p>
+            <p>
+              합계&nbsp;&nbsp;&nbsp;{numToPriceStr(items.reduce((prev, cur) => prev + cur.info.price * cur.count, 0))} 원
+            </p>
             <button type="button">결제하기</button>
           </div>
         </>
@@ -49,7 +57,7 @@ function CartItem(props) {
         </p>
       <p onClick={() => navigate("/coffee/"+pid)}>{numToPriceStr(info.price)} 원</p>
       <div className="cart-num">
-        <p>{count}</p>
+        <p>{count} <span>({count * info.capsule} 캡슐)</span></p>
         <div className="num-btns">
           <div onClick={() => dispatch(increaseCartItem(pid))}>
             <img src={process.env.PUBLIC_URL+"/img/icons/plus.png"} alt="+" />
