@@ -13,10 +13,6 @@
 [배포 주소](https://sleeping-gabin.github.io/react-project/)  
 <br>
 
-### 기획서
-[기획서](https://github.com/Sleeping-Gabin/react-project/raw/main/plan_react.pdf)  
-<br>
-
 ### 사용 기술
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
@@ -65,8 +61,6 @@
 <br>
 
 ## 기능
-- 커피/레시피 목록 및 상세 정보 보기
-- 커피 레터 보기
 - 커피/레시피 필터링
 - 커피/레시피 찜 목록에 추가/해제
 - 커피 장바구니에 추가
@@ -78,7 +72,9 @@
 
 ## 구현 내용
 ### 커피/레시피 필터링
-![필터링](https://github.com/user-attachments/assets/3c7a0721-a170-4b04-ad5d-a33a985d8605)
+태그 칩을 선택하면 해당 태그가 포함된 상품만 필터링하여 보여준다.  
+선택된 칩을 한번 더 클릭하면 필터링이 해제된다.  
+
 <details>
 <summary>코드 보기</summary>
 
@@ -120,12 +116,12 @@ export default function ListTitle(props) {
 ```
 </details>
 
-태그 칩을 선택하면 해당 태그가 포함된 상품만 필터링하여 보여준다.  
-선택된 칩을 한번 더 클릭하면 필터링이 해제된다.  
+![필터링](https://github.com/user-attachments/assets/3c7a0721-a170-4b04-ad5d-a33a985d8605)  
 <br>
 
-### redux toolkit을 사용한 찜목록/장바구니
-![찜](https://github.com/user-attachments/assets/413ead5f-2b92-441d-9f43-4cb25c507564)
+### 찜 목록
+하트 아이콘을 클릭하여 찜 목록에 커피/레시피를 추가하고 해제할 수 있다.  
+찜 목록에서 하트 클릭 시 해제된다.  
 
 <details>
 <summary>코드 보기</summary>
@@ -154,30 +150,39 @@ const likeSlice = createSlice({
 ```jsx
 // src/components/Like.js
 
-function LikeItem(props) {
-  const {pid, sid, info} = props.item;
+function Coffee(props) { 
+  const like = useSelector(state => state.like.some((item) => item.pid === coffee.pid));
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  
-  const handleClickLike = () => {
-    dispatch(toggleLikeItem({pid: pid, sid: sid, info: info}));
+
+  const likeStyle = {
+    fill: like ? "#f8382a": "none",
+    color: like ? "#f8382a": "#ccc",
   }
 
+  const handleClickLike = () => {
+    dispatch(toggleLikeItem({pid: coffee.pid, sid: "coffee", info: info}));
+  }
+
+  // ...
+
   return (
-    <li>
+    <div className={coffeeStyle.coffee}>
       ...
-      <HeartIcon className="heart-icon" onClick={handleClickLike}/>
-    </li>
+      <HeartIcon className={coffeeStyle.heart} onClick={handleClickLike} style={likeStyle}/>
+      ...
+    </div>
   )
 }
 ```
 </details>
 
-하트 아이콘을 클릭하여 찜 목록에 커피/레시피를 추가하고 해제할 수 있다.  
-찜 목록에서 하트 클릭 시 해제된다.  
+![찜](https://github.com/user-attachments/assets/413ead5f-2b92-441d-9f43-4cb25c507564)  
 <br>
 
-![장바구니](https://github.com/user-attachments/assets/6d891dca-6b73-4c5a-86a3-156d7740db42)
+### 장바구니
+장바구니 버튼으로 장바구니에 상품을 추가한다.  
+장바구니 페이지에서 상품의 수량을 변경하거나 삭제할 수 있다.  
+헤더에 상품 수량이 표시되고, 장바구니 페이지에서 합계 금액을 볼 수 있다.  
 
 <details>
 <summary>코드 보기</summary>
@@ -208,8 +213,6 @@ const cartSlice = createSlice({
 ```
 </details>
 
-장바구니 버튼으로 장바구니에 상품을 추가한다.  
-장바구니 페이지에서 상품의 수량을 변경하거나 삭제할 수 있다.  
-헤더에 상품 수량이 표시되고, 장바구니 페이지에서 합계 금액을 볼 수 있다.  
+![장바구니](https://github.com/user-attachments/assets/6d891dca-6b73-4c5a-86a3-156d7740db42)
 
 <br><br>
